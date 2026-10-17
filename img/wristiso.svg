@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150"><rect width="200" height="150" rx="16" fill="#1c2230"/><g fill="none" stroke="#e8a54b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 100h120" stroke="#3a4458" stroke-width="6"/><path d="M30 88h80M110 88l22 -4"/><path d="M134 84l18 -2"/><path d="M118 70h44" stroke="#7fb3ff"/><path d="M140 64v-14M134 56l6 6 6 -6" stroke="#7fb3ff" stroke-width="4"/><text x="100" y="136" text-anchor="middle" fill="#9aa6bb" stroke="none" font-size="15" font-family="sans-serif">lift back of hand · other hand resists</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="sans-serif">
+<rect width="320" height="200" rx="16" fill="#1c2230"/>
+<text x="160" y="26" text-anchor="middle" fill="#eef2f8" font-size="15" font-weight="700">push up → hold, wrist stays flat</text>
+<!-- table -->
+<rect x="14" y="140" width="292" height="10" rx="3" fill="#5a4a3a"/><rect x="30" y="150" width="8" height="34" fill="#4a3c2f"/><rect x="282" y="150" width="8" height="34" fill="#4a3c2f"/>
+<!-- resting forearm + flat hand (palm down) -->
+<path d="M22 120 Q22 114 30 113 L186 117 Q196 118 204 121 L262 124 Q274 125 274 131 Q274 140 262 140 L30 140 Q22 140 22 132 Z" fill="#e8a54b"/>
+<text x="62" y="134" fill="#1a1612" font-size="11" font-weight="700">forearm on table</text>
+<!-- wrist flat guide -->
+<g><line x1="196" y1="108" x2="196" y2="146" stroke="#5fd39a" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="196" y="166" text-anchor="middle" fill="#5fd39a" font-size="11" font-weight="700">wrist flat ✓</text></g>
+<text x="268" y="166" text-anchor="middle" fill="#9aa6bb" font-size="11">palm down</text>
+<!-- other hand: comes down onto the back of the hand, stays, lifts at loop end -->
+<g>
+ <animateTransform attributeName="transform" type="translate" values="0 -40;0 -40;0 0;0 0;0 -40" keyTimes="0;0.05;0.18;0.9;1" dur="6s" repeatCount="indefinite"/>
+ <path d="M300 56 L262 104 Q256 110 248 111 L206 113 Q198 113 198 118 Q198 122 206 122 L262 121 Q276 120 282 110 L318 66 Z" fill="#7fb3ff"/>
+</g>
+<!-- force arrows (no movement): push up (orange) vs resist (blue) -->
+<g opacity="0">
+ <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.22;0.28;0.82;0.88;1" dur="6s" repeatCount="indefinite"/>
+ <g><animate attributeName="opacity" values="1;0.55;1" dur="1s" repeatCount="indefinite"/>
+  <path d="M214 104 V66" stroke="#e8a54b" stroke-width="6" stroke-linecap="round"/><path d="M203 76 L214 60 L225 76 Z" fill="#e8a54b"/>
+  <text x="204" y="72" text-anchor="end" fill="#e8a54b" font-size="12" font-weight="700">push up</text>
+  <path d="M242 54 V92" stroke="#7fb3ff" stroke-width="6" stroke-linecap="round"/><path d="M231 84 L242 100 L253 84 Z" fill="#7fb3ff"/>
+  <text x="242" y="48" text-anchor="middle" fill="#7fb3ff" font-size="12" font-weight="700">other hand resists</text></g>
+</g>
+<!-- phase captions -->
+<g font-size="13" font-weight="700" text-anchor="middle">
+ <text x="160" y="190" fill="#9aa6bb" opacity="0"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.2;0.22;1" dur="6s" repeatCount="indefinite"/>1 · place the other hand</text>
+ <text x="160" y="190" fill="#e8a54b" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.22;0.24;0.84;0.86;1" dur="6s" repeatCount="indefinite"/>2 · push up and hold, nothing moves</text>
+ <text x="160" y="190" fill="#5fd39a" opacity="0"><animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.86;0.88;1" dur="6s" repeatCount="indefinite"/>3 · relax</text>
+</g>
+</svg>
